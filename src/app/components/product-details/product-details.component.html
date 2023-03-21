@@ -1,0 +1,10 @@
+<div *ngIf="product">
+  <h2>Dettagli Prodotto</h2>
+
+  <p>Nome: {{ product.name }}</p>
+  <p>Prezzo: {{ product.price }}</p>
+  <p>Quantità: {{ product.quantity }}</p>
+
+  <p *ngIf="product.quantity > 0">Prodotto Disponibile</p>
+  <p *ngIf="product.quantity == 0">Prodotto NoN disponibile</p>
+</div>
