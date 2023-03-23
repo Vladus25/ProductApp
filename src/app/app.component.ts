@@ -1,3 +1,4 @@
+import { LightComponent } from './components/light/light.component';
 import { Component, ViewChild } from '@angular/core';
 import { QuadratoColoreComponent } from './components/quadrato-colore/quadrato-colore.component';
 
@@ -38,6 +39,18 @@ export class AppComponent {
   passColor(c:string){
     this.quadrato.colora(c);
   }
+
+  lights: Light[] = [
+    { src: '../assets/img/icon.png', stato: "OFF", luminosita: 5 },
+    { src: '../assets/img/icon.png', stato: "ON", luminosita: 3 },
+    { src: '../assets/img/icon.png', stato: "ON", luminosita: 0 },
+    { src: '../assets/img/icon.png', stato: "OFF", luminosita: 8 }
+  ];
+
+  //da fare
+  passLumin(c:string){
+    this.quadrato.colora(c);
+  }
 }
 
 export interface Product{
@@ -48,5 +61,11 @@ export interface Product{
 
 export interface Colori{
   nameColor:string;
+}
+
+export interface Light{
+  src:string;
+  stato:string;
+  luminosita:number;
 }
 

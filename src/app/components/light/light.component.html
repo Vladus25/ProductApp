@@ -1,0 +1,10 @@
+<div>
+  <ol>
+    <li *ngFor="let c of lights">
+      <img src="{{c.src}}" class="light" [ngStyle]="{'background-color': luminosit}">
+      <div>{{c.stato}}</div>
+      <div>{{c.luminosita}}</div>
+      <div></div>
+    </li>
+  </ol>
+</div>
